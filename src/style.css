@@ -39,18 +39,19 @@ p {
 }
 
 .id_div {
-    padding: 20pt;
+    padding: 16pt;
     border: 1px solid;
     border-radius: 15px;
     border-color: royalblue;
     background-color: royalblue;
     float: left;
     width: 300pt;
+    margin-right: 20pt;
 }
 
 .list_div {
+    float: left;
     height: 400pt;
-    overflow: scroll;
     overflow-y: auto;
     /* Internet Explorer 10+ */
     -ms-overflow-style: none;
@@ -96,8 +97,23 @@ a.button {
     color: aliceblue;
 }
 
+
+/* For Mobile */
+
+@media screen and (max-width: 1000px) {
+    .id_div {
+        padding: 16pt;
+        border: 1px solid;
+        border-radius: 15px;
+        border-color: royalblue;
+        background-color: royalblue;
+        float: left;
+        width: 300pt;
+        margin-bottom: 16pt;
+    }
+}
+
 body {
-    height: 100%;
     background-color: aliceblue;
-    padding: 20pt;
+    overflow: hidden;
 }

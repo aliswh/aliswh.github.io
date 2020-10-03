@@ -66,8 +66,6 @@ p {
 .card {
     width: 300pt;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
     border: 1px solid;
     border-radius: 25px;
     border-color: LightSkyBlue;
@@ -100,7 +98,7 @@ a.button {
 
 /* For Mobile */
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 200px) and (max-width: 1024px) {
     .id_div {
         padding: 16pt;
         border: 1px solid;
@@ -111,9 +109,20 @@ a.button {
         width: 300pt;
         margin-bottom: 16pt;
     }
+
+    .id_div{
+        width: auto;
+        text-align: center;
+    }
+
+    .card{
+        width: auto;
+        text-align: center;
+    }
 }
 
 body {
+    width: auto;
     background-color: aliceblue;
     overflow: hidden;
 }

@@ -80,9 +80,7 @@ p {
     float: left;
     height: 100vh;
     overflow-y: auto;
-    /* Internet Explorer 10+ */
     -ms-overflow-style: none;
-    /* Firefox */
     scrollbar-width: none;
 }
 
@@ -127,7 +125,7 @@ a.button {
 /* For Mobile */
 
 @media screen and (min-width: 200px) and (max-width: 1024px) {
-    .id_div{
+    .id_div {
         height: 30%;
         width: auto;
         margin-right: 0pt;
@@ -135,6 +133,10 @@ a.button {
         text-align: center;
         background-image: none;
         border: 0pt;
+    }
+
+    .list_div {
+        height: 58vh;
     }
 
     .card{

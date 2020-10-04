@@ -51,7 +51,24 @@ p {
     border-color: transparent;
 }
 
+button {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 10pt 15pt;
+    border: 0px solid;
+    border-radius: 25px;
+    color: white;
+    background-color: #b34433;
+    transition-duration: 0.5s;
+    outline: none;
+}
+
 .indexdiv {
+    padding: 10pt;
+    background-image: url("https://aliswh.github.io/img/indexbackground.jpg");
+    background-size: cover;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -61,8 +78,9 @@ p {
     border-radius: 15px;
     background-image: linear-gradient(to bottom, #b34433, #c74e71, #c06bac, #a28dd9, #699eec);
     float: left;
-    width: 200pt;
+    width: 15%;
     margin-right: 16pt;
+    margin-left: 16pt;
 }
 
 .aboutme_div{
@@ -77,6 +95,7 @@ p {
 }
 
 .list_div {
+    width: 30%;
     float: left;
     height: 100vh;
     overflow-y: auto;
@@ -89,7 +108,8 @@ p {
 }
 
 .card {
-    width: 300pt;
+    width: 100%;
+    max-width: 300pt;
     height: auto;
     border: 0px solid;
     border-radius: 25pt;
@@ -116,11 +136,23 @@ a.button {
     line-height: 40pt;
 }
 
-.button:hover {
+button:hover {
     background-color: #c06bac;
     color: aliceblue;
 }
 
+object {
+    overflow-y: auto;
+    border: 5px;
+    border-color: #b34433;
+    display: none;
+}
+
+.web_id {
+    float: left;
+    width: 40%;
+    min-width: 600pt;
+}
 
 /* For Mobile */
 
@@ -136,11 +168,14 @@ a.button {
     }
 
     .list_div {
+        width: 100%;
         height: 58vh;
     }
 
     .card{
-        width: auto;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
         border: 0px solid;
         border-radius: 25px;
@@ -152,7 +187,6 @@ a.button {
         border-radius: 25px;
         background-image: linear-gradient(to bottom, #b34433, #c74e71, #c06bac);
         margin-left: 4%;
-
     }
     
     .title_div {
@@ -163,11 +197,25 @@ a.button {
         border: 3pt solid;
         border-color: #a28dd9;
     }
+
+    .indexdiv {
+        background-image: linear-gradient(to bottom, #0051B6, #8baed8);
+    }
+
+    .web_id {
+        display: none;
+    }
 }
 
-body {
-    background-image: url("https://aliswh.github.io/img/indexbackground.jpg");
-    background-size: cover;
+.body_index {
     overflow: hidden;
+    margin: 0pt;
 }
+
+.body_page {
+    background-color: cornflowerblue;
+    overflow: hidden;
+    margin: 0pt;
+}
+
 

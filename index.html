@@ -9,16 +9,31 @@
     <link rel="stylesheet" href="src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
-    <script src='main.js'></script>
+    <script>
+        var counter = 0;
+        function showPanel(num) {
+            if (window.screen.width >= 1024) {
+                if ( counter == 0 ) {
+                    document.getElementById(num).style.display = "block";
+                    counter = 1;
+                } else {
+                    document.getElementById(num).style.display = "none";
+                    counter = 0;
+                }
+            } else {
+                window.open("https://www.w3schools.com");
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="body_index">
     <div class="indexdiv">
         <!--wrapperdiv-->
         <div class="id_div">
             <div>
                 <div class="title_div">
-                    <h1>Project Portfolio</h1>
+                    <h1>Projects Portfolio</h1>
                     <img class="img imgid" src="https://avatars0.githubusercontent.com/u/39992505?s=460&u=add36d24092f63be12abd2dfca782e4faea5627f&v=4" alt="myphoto">
                 </div>
                     
@@ -41,9 +56,19 @@
                 <p>Used technologies: Python, R</p>
                 <img class="img" src="https://aliswh.github.io/img/italyplot_thesis.jpeg" alt="Italy plot">
                 <div style="text-align: right;">
-                    <a class="button" href="https://aliswh.github.io/R0-covid19-thesis.html">Dedicated page</a>
+                    <button type="button" onclick="showPanel(1)">Dedicated page</button>
                 </div>
             </div>
+
+            <div class="card" style="background-color: #3d6bad">
+                <!--dummy-->
+                <h3>dummy</h3>
+                <p>dummy</p>
+                <p>Used technologies: dummy</p>
+                <img class="img" src="https://aliswh.github.io/img/italyplot_thesis.jpeg" alt="Italy plot">
+                <div style="text-align: right;">
+                    <button type="button" onclick="showPanel(2)">Dedicated page</button>
+                </div>            </div>
 
             <div class="card" style="background-color: #5581ba">
                 <!--dummy-->
@@ -52,19 +77,18 @@
                 <p>Used technologies: dummy</p>
                 <img class="img" src="https://aliswh.github.io/img/italyplot_thesis.jpeg" alt="Italy plot">
                 <div style="text-align: right;">
-                    <a class="button" href="https://aliswh.github.io/R0-covid19-thesis.html">Dedicated page</a>
+                    <button type="button" onclick="showPanel(3)">Dedicated page</button>
                 </div>            </div>
 
-            <div class="card" style="background-color: #89aed5">
-                <!--dummy-->
-                <h3>dummy</h3>
-                <p>dummy</p>
-                <p>Used technologies: dummy</p>
-                <img class="img" src="https://aliswh.github.io/img/italyplot_thesis.jpeg" alt="Italy plot">
-                <div style="text-align: right;">
-                    <a class="button" href="https://aliswh.github.io/R0-covid19-thesis.html">Dedicated page</a>
-                </div>            </div>
+        </div>
 
+        <div class="web_div">
+            <object id="1" type="text/html" data="https://aliswh.github.io/R0-covid19-thesis.html" >
+            </object>
+            <object id="2" type="text/html" data="https://aliswh.github.io/src/404.html" >
+            </object>
+            <object id="3" type="text/html" data="https://aliswh.github.io/src/404.html">
+            </object>
         </div>
 
     </div>

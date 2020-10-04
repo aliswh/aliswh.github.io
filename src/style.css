@@ -1,20 +1,20 @@
 h1 {
     font-family: "Josefin Sans", sans-serif;
-    color: royalblue;
+    color: white;
     font-weight: 300;
-    font-size: 50px;
+    font-size: 28pt;
 }
 
 h2 {
-    font-family: "Noto Serif";
-    color: midnightblue;
+    font-family: "Josefin Sans", sans-serif;;
+    color: white;
     font-weight: bold;
     font-size: 25px;
 }
 
 p {
     font-family: "Noto Serif";
-    color: royalblue;
+    color: white;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
@@ -32,26 +32,47 @@ p {
 .img {
     width: 100%;
     height: auto;
-    border: 2pt;
-    border-color: black;
+    border: 0pt solid;
+    border-radius: 10pt;
     margin-left: auto;
     margin-right: auto;
 }
 
+.imgid {
+    max-width: 200pt;
+    border: 0pt solid;
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+.indexdiv {
+    width: 100%;
+}
+
 .id_div {
     padding: 16pt;
-    border: 1px solid;
+    border: 0px solid;
     border-radius: 15px;
-    border-color: royalblue;
-    background-color: royalblue;
+    background: rgb(33,78,145);
+    background: linear-gradient(0deg, rgba(33,78,145,1) 0%, rgba(152,49,67,1) 71%);
     float: left;
-    width: 300pt;
-    margin-right: 20pt;
+    width: 200pt;
+    margin-right: 16pt;
+}
+
+.aboutme_div{
+    width: 100%;
+    float: left;
+}
+
+.title_div {
+    width: 100%;
+    float: left;
 }
 
 .list_div {
     float: left;
-    height: 400pt;
+    height: 100vh;
     overflow-y: auto;
     /* Internet Explorer 10+ */
     -ms-overflow-style: none;
@@ -66,24 +87,25 @@ p {
 .card {
     width: 300pt;
     height: auto;
-    border: 1px solid;
-    border-radius: 25px;
-    border-color: LightSkyBlue;
-    background-color: LightSkyBlue;
+    border: 0px solid;
+    border-radius: 25pt;
+    border-color: transparent;
     padding: 16pt;
     margin-bottom: 16pt;
+    -moz-box-shadow: 2px 2px 10px #1C4078;
+    -webkit-box-shadow:2px 2px 10px #1C4078;
+    box-shadow: 2px 2px 10px #1C4078;
 }
 
 a.button {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 800;
-    color: midnightblue;
     cursor: pointer;
     padding: 10pt 15pt;
-    border: 1px solid;
+    border: 0px solid;
     border-radius: 25px;
-    border-color: cornflowerblue;
-    background-color: cornflowerblue;
+    color: white;
+    background-color: #983148;
     transition-duration: 0.5s;
     outline: none;
     text-decoration: none;
@@ -99,30 +121,40 @@ a.button {
 /* For Mobile */
 
 @media screen and (min-width: 200px) and (max-width: 1024px) {
-    .id_div {
-        padding: 16pt;
-        border: 1px solid;
-        border-radius: 15px;
-        border-color: royalblue;
-        background-color: royalblue;
-        float: left;
-        width: 300pt;
-        margin-bottom: 16pt;
-    }
-
     .id_div{
+        height: 30%;
         width: auto;
+        margin-right: 0pt;
+        margin-bottom: 16pt;
         text-align: center;
+        background-image: none;
+        border: 0pt;
     }
 
     .card{
         width: auto;
         text-align: center;
+        border: 0px solid;
+        border-radius: 25px;
+    }
+
+    .aboutme_div{
+        width: 50%;
+        border: 0px solid;
+        border-radius: 25px;
+        background: #983148;
+        margin-left: 4%;
+
+    }
+    
+    .title_div {
+        width: 45%;
     }
 }
 
 body {
-    width: auto;
-    background-color: aliceblue;
+    background-image: url("https://aliswh.github.io/img/indexbackground.jpg");
+    background-size: cover;
     overflow: hidden;
 }
+

@@ -12,6 +12,12 @@ h2 {
     font-size: 25px;
 }
 
+h3 {
+    font-family: "Josefin Sans", sans-serif;;
+    color: white;
+    font-size: 25px;
+}
+
 p {
     font-family: "Noto Serif";
     color: white;
@@ -53,8 +59,7 @@ p {
     padding: 16pt;
     border: 0px solid;
     border-radius: 15px;
-    background: rgb(33,78,145);
-    background: linear-gradient(0deg, rgba(33,78,145,1) 0%, rgba(152,49,67,1) 71%);
+    background-image: linear-gradient(to bottom, #b34433, #c74e71, #c06bac, #a28dd9, #699eec);
     float: left;
     width: 200pt;
     margin-right: 16pt;
@@ -68,6 +73,7 @@ p {
 .title_div {
     width: 100%;
     float: left;
+    text-align: center;
 }
 
 .list_div {
@@ -105,7 +111,7 @@ a.button {
     border: 0px solid;
     border-radius: 25px;
     color: white;
-    background-color: #983148;
+    background-color: #b34433;
     transition-duration: 0.5s;
     outline: none;
     text-decoration: none;
@@ -113,7 +119,7 @@ a.button {
 }
 
 .button:hover {
-    background-color: midnightblue;
+    background-color: #c06bac;
     color: aliceblue;
 }
 
@@ -142,13 +148,18 @@ a.button {
         width: 50%;
         border: 0px solid;
         border-radius: 25px;
-        background: #983148;
+        background-image: linear-gradient(to bottom, #b34433, #c74e71, #c06bac);
         margin-left: 4%;
 
     }
     
     .title_div {
         width: 45%;
+    }
+
+    .imgid {
+        border: 3pt solid;
+        border-color: #a28dd9;
     }
 }
 

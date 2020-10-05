@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="src/R0style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://covid19-italy.it");
+            }
+            if (num == 2) {
+                window.open("https://aliswh.github.io/docs/thesis_2020.pdf");
+            }
+            if (num == 3) {
+                window.open("https://github.com/aliswh/R0-covid19-thesis/tree/v3");
+            }
+        }
+    </script>
 </head>
 
 <body class="body_page">
@@ -27,13 +40,16 @@
                     tedious task. In particular, this project is divided into three main tasks:
                 </p>
                 <p>
-                    <ul>
-                        <li>Download all the necessary data about daily new cases made available by the Italian Department of Civil Protection through GitHub.</li> 
-                        <li>Run the relative R script in RStudio for each area, to calculate the Time Dependent basic reproduction number for each one of them.</li> 
-                        <li>Gather all the results (plots and daily R0(t) values) from the previous step and output a PDF file, to visualize the trend of each area.</li> 
-                    </ul>
+                <ul>
+                    <li>Download all the necessary data about daily new cases made available by the Italian Department
+                        of Civil Protection through GitHub.</li>
+                    <li>Run the relative R script in RStudio for each area, to calculate the Time Dependent basic
+                        reproduction number for each one of them.</li>
+                    <li>Gather all the results (plots and daily R0(t) values) from the previous step and output a PDF
+                        file, to visualize the trend of each area.</li>
+                </ul>
                 </p>
-                <p> 
+                <p>
                     In order to achieve the aim of the project, two programming languages are required: Python
                     and R. By developing the right script, it would be possible to reach the intended goal.
                     It's also important to highlight that the developed tool needs to be cross-platform and an
@@ -45,16 +61,16 @@
                 </p>
                 <p>
                     (Extract from "Aims and Objectives" section of my thesis.)
-                </p>   
+                </p>
             </div>
         </div>
         <div class="div30 divCenterParent divInBlock">
             <div class="floatingbuttons">
-                <div><button>Sito</button></div>
-                <div><button>Tesi</button></div>
-                <div><button>Git</button></div>
-            </div> 
-        </div>   
+                <div><button type="button" onclick="showPanel(1)"></button>Results</button></div>
+                <div><button type="button" onclick="showPanel(2)">Thesis</button></div>
+                <div><button type="button" onclick="showPanel(3)">GitHub</button></div>
+            </div>
+        </div>
     </div>
     <div class="div90">
         <div class="divCenterParent">
@@ -107,7 +123,7 @@
             </div>
         </div>
     </div>
-    
+
 
 </body>
 

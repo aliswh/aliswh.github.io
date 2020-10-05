@@ -1,6 +1,6 @@
 h1 {
     font-family: "Josefin Sans", sans-serif;
-    color: black;
+    color: #b34433;
     font-weight: 300;
     font-size: 28pt;
 }
@@ -14,7 +14,7 @@ h2 {
 
 th {
     font-family: "Josefin Sans", sans-serif;;
-    color: black;
+    color: #b34433;
     font-weight: bold;
     font-size: 25px;
 }
@@ -71,10 +71,8 @@ div {
     text-align: center;
 }
 
-.floatingbuttons {
-    position: absolute; 
-    top:2.5%; 
-    width: 30%;
+.floatingbuttons { 
+    top:2.5%;
 }
 
 button {
@@ -88,7 +86,7 @@ button {
     background-color: #b34433;
     transition-duration: 0.5s;
     outline: none;
-    margin-bottom: 10pt;
+    margin: 10pt;
 }
 
 button:hover {

@@ -73,6 +73,11 @@ div {
     top:2.5%;
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 button {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 800;

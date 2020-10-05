@@ -109,8 +109,7 @@ button {
 }
 
 .card {
-    width: 100%;
-    max-width: 300pt;
+    width: 80%;
     height: auto;
     border: 0px solid;
     border-radius: 25pt;

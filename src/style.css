@@ -121,21 +121,6 @@ button {
     box-shadow: 2px 2px 10px #1C4078;
 }
 
-a.button {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 800;
-    cursor: pointer;
-    padding: 10pt 15pt;
-    border: 0px solid;
-    border-radius: 25px;
-    color: white;
-    background-color: #b34433;
-    transition-duration: 0.5s;
-    outline: none;
-    text-decoration: none;
-    line-height: 40pt;
-}
-
 button:hover {
     background-color: #c06bac;
     color: aliceblue;
@@ -151,7 +136,7 @@ object {
 .web_id {
     float: left;
     width: 40%;
-    min-width: 600pt;
+    overflow-y: hidden;
 }
 
 .indexlink {

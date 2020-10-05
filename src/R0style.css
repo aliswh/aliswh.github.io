@@ -5,6 +5,20 @@ h1 {
     font-size: 28pt;
 }
 
+h2 {
+    font-family: "Josefin Sans", sans-serif;;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+th {
+    font-family: "Josefin Sans", sans-serif;;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 p {
     font-family: "Noto Serif";
     color: black;
@@ -29,10 +43,12 @@ li {
     text-align: justify;
 }
 
+table {
+    padding: 3%;
+}
+
 div {
     margin: auto;
-    border: 3pt solid;
-    border-color: red;
 }
 
 .div30{
@@ -72,6 +88,7 @@ button {
     background-color: #b34433;
     transition-duration: 0.5s;
     outline: none;
+    margin-bottom: 10pt;
 }
 
 button:hover {
@@ -81,8 +98,14 @@ button:hover {
 
 .body_page {
     background-color: white;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     margin: 2,5%;
     padding: 2,5%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

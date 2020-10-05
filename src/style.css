@@ -24,6 +24,7 @@ p {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
+    text-align: justify;
 }
 
 .p_id {
@@ -152,6 +153,11 @@ object {
     float: left;
     width: 40%;
     min-width: 600pt;
+}
+
+.indexlink {
+    text-decoration: none;
+    color: #b34433;
 }
 
 /* For Mobile */

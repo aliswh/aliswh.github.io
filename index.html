@@ -5,17 +5,22 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio</title>
+    <title>Alice S. : Projects Portfolio</title>
     <link rel="stylesheet" href="src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <script>
         var counter = 0;
+        var clicked;
         function showPanel(num) {
             if (window.screen.width >= 1024) {
-                if ( counter == 0 ) {
+                if ( counter == 0 || num != clicked) {
+                    for (i=1; i<=3; i++) {
+                        document.getElementById(i).style.display = "none";
+                    }
                     document.getElementById(num).style.display = "block";
                     counter = 1;
+                    clicked = num;
                 } else {
                     document.getElementById(num).style.display = "none";
                     counter = 0;
@@ -47,8 +52,8 @@
                     
                 <div class="aboutme_div">
                     <h2>About me</h2>
-                    <p class="p_id">Alice, 23</p>
-                    <p class="p_id">Find me on Github and LinkedIn</p>
+                    <p class="p_id">Alice, 23. Graduate of BSc in Computer Science. Student of MS in Data Science. Interested in data, ML and AI.</p>
+                    <p class="p_id">Find me on <a class="indexlink" href="https://github.com/aliswh">GitHub</a> and <a class="indexlink" href="https://www.linkedin.com/in/alice-schiavone-5b1b01146/">LinkedIn</a></p>
                 </div>
             </div>  
         </div>
@@ -69,7 +74,7 @@
             </div>
 
             <div class="card" style="background-color: #3d6bad">
-                <!--dummy-->
+                <!--2nd project-->
                 <h3>dummy</h3>
                 <p>dummy</p>
                 <p>Used technologies: dummy</p>
@@ -79,7 +84,7 @@
                 </div>            </div>
 
             <div class="card" style="background-color: #5581ba">
-                <!--dummy-->
+                <!--3rd project-->
                 <h3>dummy</h3>
                 <p>dummy</p>
                 <p>Used technologies: dummy</p>

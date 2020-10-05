@@ -14,6 +14,12 @@ p {
     text-align: justify;
 }
 
+img {
+    max-width: 200pt;
+    border: 0pt solid;
+    border-radius: 50%;
+}
+
 li {
     font-family: "Noto Serif";
     color: black;
@@ -75,6 +81,7 @@ button:hover {
 
 .body_page {
     background-color: white;
+    overflow: hidden;
     width: 100%;
     margin: 2,5%;
     padding: 2,5%;

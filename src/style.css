@@ -127,16 +127,18 @@ button:hover {
 }
 
 object {
-    overflow-y: auto;
-    border: 5px;
-    border-color: #b34433;
+    width: 40%;
+    height: 95vh;
     display: none;
+    border: 0px solid;
+    border-radius: 25pt;
+    border-color: transparent;
 }
 
 .web_id {
     float: left;
     width: 40%;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .indexlink {

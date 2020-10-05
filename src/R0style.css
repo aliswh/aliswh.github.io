@@ -30,8 +30,6 @@ p {
 
 img {
     max-width: 200pt;
-    border: 0pt solid;
-    border-radius: 25pt;
 }
 
 li {
@@ -100,6 +98,7 @@ button:hover {
     width: 100%;
     margin: 2,5%;
     padding: 2,5%;
+    text-align: center;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

@@ -6,13 +6,109 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>R0 Covid19</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/R0style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
 
 <body class="body_page">
-    <h1>covid</h1>
+    <div class="div90 divCenterParent">
+        <div class="div60 divCenterParent divInBlock">
+            <div class="">
+                <h1>R0(t) visualization tool for Italy</h1>
+            </div>
+            <div class="">
+                <p>The aim of this project is the development of a dashboard to visualize R0(t) in Italy. More
+                    specifically, we take in consideration provinces, regions and the whole nation, to later analyse
+                    data at various levels. Until now, the download of data and its relative use in functions to
+                    calculate R0(t) has been done manually. This takes a lot of time and it’s not efficient. To speed
+                    up the process, we developed a tool able to download the necessary data and compute the
+                    respective R0(t). This will help further studies on the topic, by automating a – otherwise –
+                    tedious task. In particular, this project is divided into three main tasks:
+                </p>
+                <p>
+                    <ul>
+                        <li>Download all the necessary data about daily new cases made available by the Italian Department of Civil Protection through GitHub.</li> 
+                        <li>Run the relative R script in RStudio for each area, to calculate the Time Dependent basic reproduction number for each one of them.</li> 
+                        <li>Gather all the results (plots and daily R0(t) values) from the previous step and output a PDF file, to visualize the trend of each area.</li> 
+                    </ul>
+                </p>
+                <p> 
+                    In order to achieve the aim of the project, two programming languages are required: Python
+                    and R. By developing the right script, it would be possible to reach the intended goal.
+                    It's also important to highlight that the developed tool needs to be cross-platform and an
+                    Internet connection is required to download new data daily. There aren’t any other specific
+                    software requirements, because the process shouldn’t need many resources and it would
+                    likely run for personal use only.
+                    The project was completed in the period of time between July and September 2020 and it is
+                    reviewed by Professor Davide Tosi.
+                </p>
+                <p>
+                    (Extract from "Aims and Objectives" section of my thesis.)
+                </p>   
+            </div>
+        </div>
+        <div class="div30 divCenterParent divInBlock">
+            <div class="floatingbuttons">
+                <div><button>Sito</button></div>
+                <div><button>Tesi</button></div>
+                <div><button>Git</button></div>
+            </div> 
+        </div>   
+    </div>
+    <div class="div90">
+        <div class="divCenterParent">
+            <div class="div30 divInBlock">Script</div>
+            <div class="div30 divInBlock">Code</div>
+            <div class="div30 divInBlock">Results</div>
+        </div>
+        <div class="divCenterParent">
+            <div class="div30 divInBlock">
+                <div>
+                    <h2>est.R0.TD.R</h2>
+                </div>
+                <div>
+                    <h2>getalldata.py</h2>
+                </div>
+                <div>
+                    <h2>mainscript.R</h2>
+                </div>
+                <div>
+                    <h2>makeboard.py</h2>
+                </div>
+            </div>
+            <div class="div30 divInBlock">
+                <div>
+                    <img src="/img/R0img/est.R0.TD.R.png" alt="est.R0.TD.R.png">
+                </div>
+                <div>
+                    <img src="/img/R0img/getalldata.py.png" alt="getalldata.py.png">
+                </div>
+                <div>
+                    <img src="/img/R0img/mainscript.R.png" alt="mainscript.R.png">
+                </div>
+                <div>
+                    <img src="/img/R0img/makeboard.py.png" alt="makeboard.py.png">
+                </div>
+            </div>
+            <div class="div30 divInBlock">
+                <div>
+                    <h2>results img</h2>
+                </div>
+                <div>
+                    <h2>results img</h2>
+                </div>
+                <div>
+                    <h2>results img</h2>
+                </div>
+                <div>
+                    <h2>results img</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
 </body>
 
 </html>

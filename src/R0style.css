@@ -1,0 +1,79 @@
+h1 {
+    font-family: "Josefin Sans", sans-serif;
+    color: black;
+    font-weight: 300;
+    font-size: 28pt;
+}
+
+p {
+    font-family: "Noto Serif";
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+li {
+    font-family: "Noto Serif";
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+div {
+    margin: auto;
+    border: 3pt solid;
+    border-color: red;
+}
+
+.div30{
+    width: 30%;
+}
+
+.divInBlock {
+    display: inline-block;
+}
+
+.div60 {
+    width: 60%;
+}
+
+.div90{
+    width: 90%;
+}
+
+.divCenterParent {
+    text-align: center;
+}
+
+.floatingbuttons {
+    position: absolute; 
+    top:2.5%; 
+    width: 30%;
+}
+
+button {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 10pt 15pt;
+    border: 0px solid;
+    border-radius: 25px;
+    color: white;
+    background-color: #b34433;
+    transition-duration: 0.5s;
+    outline: none;
+}
+
+button:hover {
+    background-color: #c06bac;
+    color: aliceblue;
+}
+
+.body_page {
+    margin: 2,5%;
+    padding: 2,5%;
+}

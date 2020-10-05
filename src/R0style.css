@@ -31,7 +31,7 @@ p {
 img {
     max-width: 200pt;
     border: 0pt solid;
-    border-radius: 50%;
+    border-radius: 25pt;
 }
 
 li {

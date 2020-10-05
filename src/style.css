@@ -199,6 +199,7 @@ object {
     }
 
     .web_id {
+        width: 0%;
         display: none;
     }
 }

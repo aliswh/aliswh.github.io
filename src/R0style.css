@@ -78,6 +78,10 @@ table {
     margin-right: auto;
 }
 
+.res_img {
+    max-width: auto;
+}
+
 button {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 800;

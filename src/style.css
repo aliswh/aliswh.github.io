@@ -188,11 +188,16 @@ object {
     }
 
     .aboutme_div{
-        width: 50%;
+        width: 45%;
         border: 0px solid;
         border-radius: 25px;
         background-image: linear-gradient(to bottom, #b34433, #c74e71, #c06bac);
         margin-left: 4%;
+        padding: 5pt;
+    }
+
+    .indexlink {
+        color: #24559e;
     }
     
     .title_div {

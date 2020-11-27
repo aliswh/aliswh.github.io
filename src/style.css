@@ -45,6 +45,14 @@ p {
     margin-right: auto;
 }
 
+.solino {
+    width: 100pt;
+    height: 100pt;
+    border: 0pt solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .imgid {
     max-width: 200pt;
     border: 0pt solid;

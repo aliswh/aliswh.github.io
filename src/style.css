@@ -48,8 +48,8 @@ p {
 .solino {
     width: 100%;
     height: auto;
-    max-width: 50pt;
-    max-height: 50pt;
+    max-width: 100pt;
+    max-height: 100pt;
     border: 0pt solid;
     margin-left: auto;
     margin-right: auto;

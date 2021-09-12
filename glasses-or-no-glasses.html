@@ -33,10 +33,15 @@
         </div>
         <div class="">
             <div class="">
-                <h1>Convolutional Neural Networks: glasses or no glasses?</h1>
+                <h1>Convolutional Neural Networks</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Glasses or no glasses?</h2>
             </div>
             <div class="">
-                <p>Development of a Convolutional Neural Network with a focus on scalability and hyperparameter tuning.
+                <p>Development of a Convolutional Neural Network with a focus on scalability and hyperparameter tuning. 
+                    Data comes from <a class="indexlink" href="https://www.kaggle.com/jeffheaton/glasses-or-no-glasses">Kaggle</a>. <br>
+                    Project for the courses of Statistical Methods for Machine Learning and Algorithms for Massive Datasets from Università Statale di Milano.
                 </p>
                 <p>
                     Open in Google Colab or read the report to get some insights on the history of CNNs and this application results.
@@ -50,18 +55,21 @@
                 <tr>
                     <td>
                         <p>Shining little stars in a night sky? Or the loss of predictions of a binary classification computed by the cross-entropy function? </p>
-                        <img style="max-width: 200px; width: 90%;" src="/img/glassesimg/predictions.png" alt="resultsplots.png">
+                        <img style="max-width: 500px; width: 90%;" src="/img/glassesimg/predictions.png" alt="resultsplots.png">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <img style="max-width: none; width: 90%;" src="/img/glassesimg/predictedfaces.png" alt="resultsplots.png">
+                        <p>Before: 1024x1024x3 images with one binary label (0: no glasses, 1: glasses).</p>
+                        <img style="max-width: none; width: 100%;" src="/img/glassesimg/predictedfaces_highres.png" alt="resultsplots.png">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img style="max-width: none; width: 90%;" src="/img/glassesimg/predictedfaces_highres.png" alt="resultsplots.png">
+                        <p>After: 32x32x3 images with their predicted probability of being 'glasses'.</p>
+                        <img style="max-width: none; width: 100%;" src="/img/glassesimg/predictedfaces.png" alt="resultsplots.png">
+                        <p>Note: the model is not sure about the first image, which is in fact one of the badly generated ones!</p>
                     </td>
                 </tr>
             </tbody>

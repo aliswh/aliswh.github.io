@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>R0 Covid19</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://github.com/aliswh/glasses-or-no-glasses/blob/main/glasses_or_no_glasses.pdf");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/glasses-or-no-glasses");
+            }
+            if (num == 3) {
+                window.open("https://colab.research.google.com/github/aliswh/glasses-or-no-glasses/blob/main/glasses_or_no_glasses.ipynb");
+            }
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Report</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+                <button type="button" onclick="showPanel(3)">Code</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>Convolutional Neural Networks: glasses or no glasses?</h1>
+            </div>
+            <div class="">
+                <p>Development of a Convolutional Neural Network with a focus on scalability and hyperparameter tuning.
+                </p>
+                <p>
+                    Open in Google Colab or read the report to get some insights on the results.
+                </p>
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class="div90">
+            <thead>
+                <th>Script</th>
+                <th>Code</th>
+                <th>Results</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>getalldata.py</h2>
+                    </td>
+                    <td>
+                        <img src="/img/R0img/getalldata.py.png" alt="getalldata.py.png">
+                    </td>
+                    <td>
+                        <img src="/img/R0img/get_res.png" alt="get_res.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>mainscript.R</h2>
+                    </td>
+                    <td>
+                        <img src="/img/R0img/mainscript.R.png" alt="mainscript.R.png">
+                    </td>
+                    <td>
+                        <img src="/img/R0img/main_res.png" alt="main_res.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>makeboard.py</h2>
+                    </td>
+                    <td>
+                        <img src="/img/R0img/makeboard.py.png" alt="makeboard.py.png">
+                    </td>
+                    <td>
+                        <img src="/img/R0img/make_res.png" alt="make_res.png">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <img style="max-width: none; width: 90%;" src="/img/R0img/pdf.png" alt="resultspdf.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img style="max-width: none; width: 90%;" src="/img/R0img/plots.jpg" alt="resultsplots.png">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

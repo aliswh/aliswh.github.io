@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Glasses or No Glasses</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://github.com/aliswh/ser_ae/blob/main/Emo_CNN_AE.pdf");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/ser_ae");
+            }
+            if (num == 3) {
+                window.open("https://colab.research.google.com/drive/1lU7mCWV8bwIkSoNibnEwsE2I0anRhksO?usp=sharing");
+            }
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Report</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+                <button type="button" onclick="showPanel(3)">Code</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>Multi-Lingual Speech Emotion Recognition via S.C.AE</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Review of methods for SER and semi-supervised approach</h2>
+            </div>
+            <div class="">
+                <p> I focused on the development of a Convolutional Stacked Autoencoder to learn the latent vector of raw input speech.
+                    The increased challenge is in using multiple datasets for Italian, German and English. (EMOVO, EMODB, RAVDESS).
+
+                <p> While doing so, we compare its performance on multiple models, such as: 
+                    supervised learning via DNN and CNN on a vector extracted hand-made features (Log-Mel, MFCCs, Centroid, Chroma);
+                    SVM and MLP classifiers on encoded raw signal; CNN on features+encoded signal, and more.
+                </p>
+                <p>
+                    We reach a slightly better performance of a classic baseline model.
+                </p>
+                </p>
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Can we perform end-to-end classification without the need of hand-extracted features like Log-Mel Spectrograms?</p>
+                        <img style="max-width: 500px; width: 90%;" src="/img/ser_cae/mel.png" alt="Architecture">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Waffle Chart to show training and testing dataset subdivision with their labels to show class balance.</p>
+                        <img style="max-width: none; width: 100%;" src="/img/ser_cae/waffle.png" alt="algorithm">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Confusion Matrix for evaluation of final model on test data.</p>
+                        <img style="max-width: none; width: 100%;" src="/img/ser_cae/cm.png" alt="results">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Glasses or No Glasses</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://github.com/aliswh/lastfm/raw/main/presentazione.pptx");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/lastfm");
+            }
+            if (num == 3) {
+                window.open("https://github.com/aliswh/lastfm/tree/main/src");
+            }
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Report</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+                <button type="button" onclick="showPanel(3)">Code</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>LastFM Analytics</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Get users listening sessions on a Data Lake via PySpark</h2>
+            </div>
+            <div class="">
+                <p> Architecture and Algorithms for a one-shot request to get user listening sessions from LastFM.
+                    Data comes from <a class="indexlink" href="https://www.last.fm/api">LastFM API</a>. <br>
+                    Project for the courses of Architectures for Big Data from Università Statale di Milano, developed with <a class="indexlink" href="https://github.com/Kidara">Davide D'Ascenzo</a>.
+                </p>
+                <p>
+                    Data is queried via PyLast, saved on Google Cloud Storage Data Lake, and PySpark computes jobs to get analytics on said data.
+                </p>
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Multiple views of the architecture have been developed. More about it in "Report".</p>
+                        <img style="max-width: 500px; width: 90%;" src="/img/lastfm/afbd_arch_pic.png" alt="Architecture">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>How to compute the listening sessions of a user?</p>
+                        <img style="max-width: none; width: 100%;" src="/img/lastfm/lastfm-logic.PNG" alt="algorithm">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Analytics on said listening sessions.</p>
+                        <img style="max-width: none; width: 100%;" src="/img/lastfm/lastfm-results.png" alt="results">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

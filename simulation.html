@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>simulation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://github.com/aliswh/lunaparksim/blob/main/simulation_report.pdf");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/lunaparksim");
+            }
+            
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Report</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>Luna Park simulation in AnyLogic</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Estimate of profits of a LunaPark via simulations</h2>
+            </div>
+            <div class="">
+                <p> “It’s a sunny Sunday morning, and the gates to your  Luna Park have opened at 9:00. 
+                    As more visitors arrive to get on the rides, eat candies and rest on the benches scattered across the park, 
+                    you begin to wonder: how much money will I make today?”
+
+                <p> Perfom multiple runs of an agent-based and discrete events hybrid approach to estimate simple parameters.
+                
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>State chart diagram of the visitor logic.</p>
+                        <img style="max-width: 500px; width: 90%;" src="/img/sim/visitorlogic.PNG" alt="vislo">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>AnyLogic Parameters Variation Experiment results</p>
+                        <img style="max-width: none; width: 60%;" src="/img/sim/results.PNG" alt="results">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visitors going in the Haunted House ride.</p>
+                        <img style="max-width: none; width: 80%;" src="/data/gifs/haunted_house.gif" alt="haunted house">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

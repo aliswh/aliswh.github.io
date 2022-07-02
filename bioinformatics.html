@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>bioinformatics</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://github.com/aliswh/CRR_classification/blob/main/Bioinformatics_report.pdf");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/CRR_classification");
+            }
+            if (num == 3) {
+                window.open("https://colab.research.google.com/drive/17VAFP5EfNVwNMfrzheC0c3Jk5XTal69i");
+            }
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Report</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+                <button type="button" onclick="showPanel(3)">Colab</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>Cis-Regulatory Regions Classification: Bioinformatics practice</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Binary Classification on biological data</h2>
+            </div>
+            <div class="">
+                <p> Abstract:
+
+                <p> To solve the problem of classification of active regulatory regions, we try to predict whether the enhancers and promoters
+                     of the cell line K562 are active or inactive. This binary classification problem has been approached in different ways: 
+                     we explore the possibility of doing it by the implementation of deep learning techniques. First, a FFNN will be trained 
+                     on the epigenomic data of K652, with levels of activation from FANTOM5. Secondly, a CNN is trained on the reference genomic sequence \emph{hg38}. 
+                     To fully grasp the complexity of the task, we concatenate the two networks into a MMNN, which uses both type of data to solve the task. 
+                     Results are close to those of S.O.A., even if the training has been done on limited resources, and only on one cell line. 
+                     This implies that more tests are needed to determine a statistical relevance.
+                </p>
+
+                </p>
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>K562 cell line.</p>
+                        <img style="max-width: 500px; width: 90%;" src="/img/bioinf/cell.png" alt="mel">
+                    </td>
+                </tr>
+
+                <tr>ß
+                    <td>
+                        <p>UMAP decomposition.</p>
+                        <img style="max-width: none; width: 60%;" src="/img/bioinf/umap.png" alt="waffle">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Evaluation metrics.</p>
+                        <img style="max-width: none; width: 80%;" src="/img/bioinf/eval_1.png" alt="eval_1">
+                        <img style="max-width: none; width: 80%;" src="/img/bioinf/eval_2.png" alt="eval_2">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -26,6 +26,9 @@
                     counter = 0;
                 }
             } else { // ADD LINK ALSO TO BOTTOM OF THE PAGE!!
+                if (num == 0) {
+                    window.open("https://aliswh.github.io/src/404.html")
+                }
                 if (num == 1) {
                     window.open("https://aliswh.github.io/R0-covid19-thesis.html");
                 }
@@ -38,8 +41,11 @@
                 if (num == 4) {
                     window.open("https://aliswh.github.io/ser_cae.html")
                 }
-                if (num == 4) {
-                    window.open("https://aliswh.github.io/src/404.html")
+                if (num == 5) {
+                    window.open("https://aliswh.github.io/bioinformatics.html")
+                }
+                if (num == 6) {
+                    window.open("https://aliswh.github.io/simulation.html")
                 }
             }
         }
@@ -109,9 +115,29 @@
                 <p>End-to-end multiclass semi-supervised classification of human speech.</p>
                 
                 <p>Used technologies: TensorFlow, Keras</p>
-                <img class="img" src="https://aliswh.github.io/img/ser_cae/mel.png" alt="Soon!">
+                <img class="img" src="https://aliswh.github.io/img/ser_cae/mel.png" alt="mel">
                 <div style="text-align: right;">
                     <button type="button" onclick="showPanel(4)">Dedicated page</button>
+                </div>            </div>
+
+            <div class="card" style="background-color: #89aed5">
+                <!--5rd project-->
+                <h3>Cis-Regulatory Regions Classification</h3>
+                
+                <p>Used technologies: Python, TensorFlow</p>
+                <img class="img" src="https://github.com/aliswh/CRR_classification/raw/main/imgs/decomposition.png" alt="enchancers">
+                <div style="text-align: right;">
+                    <button type="button" onclick="showPanel(5)">Dedicated page</button>
+                </div>            </div>
+
+            <div class="card" style="background-color: #89aed5">
+                <!--5rd project-->
+                <h3>LunaPark Simulation</h3>
+                
+                <p>Used technologies: AnyLogic</p>
+                <img class="img" src="https://github.com/aliswh/lunaparksim/raw/main/data/gifs/park.gif" alt="LunaPark gif">
+                <div style="text-align: right;">
+                    <button type="button" onclick="showPanel(6)">Dedicated page</button>
                 </div>            </div>
 
             <div class="card" style="background-color: #89aed5">
@@ -121,7 +147,7 @@
                 <p>Used technologies: personal growth</p>
                 <img class="solino" src="https://aliswh.github.io/img/solino.png" alt="Soon!">
                 <div style="text-align: right;">
-                    <button type="button" onclick="showPanel(5)">Dedicated page</button>
+                    <button type="button" onclick="showPanel(7)">Dedicated page</button>
                 </div>            </div>
 
 
@@ -133,11 +159,13 @@
                 <p>Used technologies: personal growth</p>
                 <img class="solino" src="https://aliswh.github.io/img/solino.png" alt="Soon!">
                 <div style="text-align: right;">
-                    <button type="button" onclick="showPanel(3)">Dedicated page</button>
+                    <button type="button" onclick="showPanel(0)">Dedicated page</button>
                 </div>            </div> 
         </div>
 
         <div class="web_div">
+            <object id="0" type="text/html" data="https://aliswh.github.io/src/404.html">
+            </object>
             <object id="1" type="text/html" data="https://aliswh.github.io/R0-covid19-thesis.html" >
             </object>
             <object id="2" type="text/html" data="https://aliswh.github.io/glasses-or-no-glasses.html" >
@@ -146,7 +174,9 @@
             </object>
             <object id="4" type="text/html" data="https://aliswh.github.io/ser_cae.html">
             </object>
-            <object id="5" type="text/html" data="https://aliswh.github.io/src/404.html">
+            <object id="5" type="text/html" data="https://aliswh.github.io/bioinformatics.html">
+            </object>
+            <object id="6" type="text/html" data="https://aliswh.github.io/simulation.html">
             </object>
         </div>
 

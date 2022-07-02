@@ -15,7 +15,7 @@
         function showPanel(num) {
             if (window.screen.width >= 1024) {
                 if ( counter == 0 || num != clicked) {
-                    for (i=1; i<=5; i++) {
+                    for (i=1; i<=6; i++) {  // this must be incremented when adding new projects
                         document.getElementById(i).style.display = "none";
                     }
                     document.getElementById(num).style.display = "block";

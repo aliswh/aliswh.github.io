@@ -15,7 +15,7 @@
         function showPanel(num) {
             if (window.screen.width >= 1024) {
                 if ( counter == 0 || num != clicked) {
-                    for (i=1; i<=6; i++) {  // this must be incremented when adding new projects
+                    for (i=1; i<=8; i++) {  // this must be incremented when adding new projects
                         document.getElementById(i).style.display = "none";
                     }
                     document.getElementById(num).style.display = "block";
@@ -25,7 +25,7 @@
                     document.getElementById(num).style.display = "none";
                     counter = 0;
                 }
-            } else { // ADD LINK ALSO TO BOTTOM OF THE PAGE!!
+            } else { // ADD LINK ALSO TO BOTTOM OF THE PAGE!! + change variable up!!
                 if (num == 0) {
                     window.open("https://aliswh.github.io/src/404.html")
                 }
@@ -82,24 +82,24 @@
             <!--project list-->
             <!--card colors: #24559e, #3d6bad, #5581ba, #6e97c8, #89aed5-->
 
-            <div class="card" style="background-color: #24559e;">
+            <div class="card" style="background-color: #1E3F82;">
                 <!--7st project-->
                 <h3>Deep Learning Methods for the Segmentation of White Matter Hyperintesities</h3>
                 <p>MSs thesis project. Automatic segmentation method for medical imaging analysis. Segmentation of age-related white matter hyperintesities as a biomarker of cognitive decline and mortality.</p>
                 <p>Results published and presented at MIDL2023.</p>
                 <p>Keywords: Deep Learning, Medical Imaging Analysis, </p>
-                <img class="img" src="https://aliswh.github.io/img/italyplot_thesis.jpeg" alt="Italy plot">
+                <img class="img" src="/img/wmhthesis/strategy.png" alt="stretegy">
                 <div style="text-align: right;">
                     <button type="button" onclick="showPanel(8)">Dedicated page</button>
                 </div>
             </div>
 
-            <div class="card" style="background-color: #3d6bad">
+            <div class="card" style="background-color: #224894">
                 <!--8nd project-->
                 <h3>Multimodal representation learning of brain pathology</h3>
                 <p>Method for learning features of pairs of magnetic resonance images of human brains and their respective medical report.</p>
                 <p>Keywords: Information Retrieval, Multi-modal learning, Computer Vision, Natural Language Processing (NLP), Brain Pathology</p>
-                <img class="img" src="https://aliswh.github.io/img/glassesimg/featuremaps.png" alt="Feature Maps">
+                <img class="img" src="/img/brainclip/brainclip.png" alt="model">
                 
                 <div style="text-align: right;">
                     <button type="button" onclick="showPanel(7)">Dedicated page</button>

@@ -12,10 +12,10 @@
     <script>
         function showPanel(num) {
             if (num == 1) {
-                window.open("https://github.com/aliswh/lunaparksim/blob/main/simulation_report.pdf");
+                window.open("https://github.com/aliswh/aliswh.github.io/blob/main/docs/thesis_2023.pdf");
             }
             if (num == 2) {
-                window.open("https://github.com/aliswh/lunaparksim");
+                window.open("https://openreview.net/pdf?id=c0KnufAuX6k");
             }
             
         }
@@ -25,22 +25,22 @@
 <body class="body_page">
     <div class="div90 divCenterParent">
         <div class="floatingbuttons">
-                <button type="button" onclick="showPanel(1)">Report</button>
-                <button type="button" onclick="showPanel(2)">GitHub</button>
+                <button type="button" onclick="showPanel(1)">Thesis</button>
+                <button type="button" onclick="showPanel(2)">Paper</button>
         </div>
         <div class="">
             <div class="">
-                <h1>Luna Park simulation in AnyLogic</h1>
+                <h1>Deep Learning Methods for the Segmentation of White Matter Hyperintesities</h1>
             </div>
             <div>
-                <h2 style="font-size: 20pt;">Estimate of profits of a LunaPark via simulations</h2>
+                <h2 style="font-size: 20pt;">Master's thesis project on Medical Imaging Analysis</h2>
             </div>
             <div class="">
-                <p> “It’s a sunny Sunday morning, and the gates to your  Luna Park have opened at 9:00. 
-                    As more visitors arrive to get on the rides, eat candies and rest on the benches scattered across the park, 
-                    you begin to wonder: how much money will I make today?”
+                <p> I was a guest at "Pioneer Center for AI" in Copenhagen. The project was aimed at developing a robust method
+                    for the segmentation of age-related white matter hyperintesities, a biomarker for cognitive decline and increased
+                    risk of mortality. 
 
-                <p> Perfom multiple runs of an agent-based and discrete events hybrid approach to estimate simple parameters.
+                <p> A part of the results has been accepted and <a href="https://openreview.net/pdf?id=c0KnufAuX6k">published</a> at the MIDL 2023 conference, in Nashville, in the short paper track.
                 
             </div>
         </div>
@@ -50,21 +50,22 @@
             <tbody>
                 <tr>
                     <td>
-                        <p>State chart diagram of the visitor logic.</p>
-                        <img style="max-width: none; width: 90%;" src="/img/sim/visitorlogic.PNG" alt="vislo">
+                        <p>Quick overview of the tested methods.</p>
+                        <img style="max-width: none; width: 90%;" src="/img/wmhthesis/methods.png" alt="methods">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p>AnyLogic Parameters Variation Experiment results.</p>
-                        <img style="max-width: none; width: 60%;" src="/img/sim/results.PNG" alt="results">
+                        <p>Visualization of the segmentation of three tested methods on four different test sets.</p>
+                        <img style="max-width: none; width: 90%;" src="/img/wmhthesis/results.png" alt="results">
                     </td>
                 </tr>
+
                 <tr>
                     <td>
-                        <p>Visitors going in the Haunted House ride.</p>
-                        <img style="max-width: none; width: 80%;" src="https://github.com/aliswh/lunaparksim/raw/main/data/gifs/haunted_house.gif" alt="haunted house">
+                        <p>Poster presented at MIDL 2023.</p>
+                        <img style="max-width: none; width: 80%;" src="/img/wmhthesis/poster_midl.svg" alt="poster">
                     </td>
                 </tr>
             </tbody>

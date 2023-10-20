@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>brainclip</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://github.com/aliswh/brain-CLIP/blob/main/brainclip_report.pdf");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/brain-CLIP");
+            }
+            
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Report</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>Multimodal representation learning of brain pathology</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Image-text retrieval model inspired by CLIP.</h2>
+            </div>
+            <div class="">
+                <p> Abstract: We propose a method for learning features of pairs of magnetic resonance images of human brains and their respective medical report. 
+                    This representation can be used to train a classifier, or to match other samples with similar features by computing a similarity score. 
+                    We train a deep learning model with a contrastive loss, which learns to match image-text pairs. 
+                    We depend on well-established state-of-the-art methods to construct our architecture. 
+                    Finally, we examine the obtained results, demonstrating that although the suggested method is not yet optimal, 
+                    it still exhibits promising behavior that could be investigated further in future work.
+                
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>One case from the dataset and its available MRI sequences. The proposed model was trained only on DWI B1000, T2S and T2 FLAIR.</p>
+                        <img style="max-width: none; width: 90%;" src="/img/brainclip/caseexample.png" alt="case">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Example of a similarity matrix computed on one batch during training. The ideal matrix is the identity matrix, with values equal to one (bright) on the diagonal. 
+                        However, when training on similar sample, we would also expect images with the same class to have higher similarity values.</p>
+                        <img style="max-width: none; width: 30%;" src="/img/brainclip/idea_sim.png" alt="ideal sim matrix">
+                        <img style="max-width: none; width: 40%;" src="/img/brainclip/sim.png" alt="sim matrix">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>For each report in the test set, we compute its similarity between each other sample. 
+                            We plot the similarity score for each pair-pair match only if they have the same ground truth class annotation..</p>
+                        <img style="max-width: none; width: 80%;" src="/img/brainclip/eval.png" alt="eval">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

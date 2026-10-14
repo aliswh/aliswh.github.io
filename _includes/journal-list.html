@@ -5,7 +5,7 @@
 {% if post.pinned %}
 <div class="card" style="background-color: #b974b8;">
 {% else %}
-<div class="card" style="background-color: {% cycle '#24559e', '#1E3F82', '#224894', '#3d6bad' %};">
+<div class="card" style="background-color: #1E3F82;">
 {% endif %}
     <h3>{{ post.title }}</h3>
     <p>{{ post.date | date: "%-d %B %Y" }}</p>

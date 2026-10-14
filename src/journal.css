@@ -1,11 +1,72 @@
 .journal_page {
+    --jp-bg: #14182b;
+    --jp-text: #e4e4e8;
+    --jp-heading: #e8785f;
+    --jp-subheading: #6fa3e0;
+    --jp-muted: #9a9aa5;
+    --jp-link: #e8785f;
+    --jp-tab-bg: rgba(255, 255, 255, 0.1);
+    --jp-tab-text: #e4e4e8;
+    --jp-tab-active-bg: #b34433;
+    --jp-toggle-bg: rgba(255, 255, 255, 0.1);
+    --jp-toggle-text: #e4e4e8;
+
     margin: 0;
-    background-color: white;
-    color: black;
+    background-color: var(--jp-bg);
+    color: var(--jp-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.light-mode .journal_page {
+    --jp-bg: white;
+    --jp-text: black;
+    --jp-heading: #b34433;
+    --jp-subheading: #24559e;
+    --jp-muted: #666;
+    --jp-link: #b34433;
+    --jp-tab-bg: #e8eef7;
+    --jp-tab-text: #24559e;
+    --jp-tab-active-bg: #b34433;
+    --jp-toggle-bg: #e8eef7;
+    --jp-toggle-text: #24559e;
 }
 
 .journal_header {
     padding: 24px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.journal_page .tabs_light .tab {
+    color: var(--jp-tab-text);
+    background-color: var(--jp-tab-bg);
+}
+
+.journal_page .tabs_light .tab_active {
+    color: white;
+    background-color: var(--jp-tab-active-bg);
+}
+
+.theme-toggle {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--jp-toggle-text);
+    background-color: var(--jp-toggle-bg);
+    transition-duration: 0.5s;
+}
+
+.theme-toggle:hover {
+    background-color: #c06bac;
+    color: aliceblue;
 }
 
 .entry {
@@ -18,7 +79,7 @@
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
     font-size: 28pt;
-    color: #b34433;
+    color: var(--jp-heading);
     margin: 4px 0 24px;
 }
 
@@ -26,7 +87,7 @@
 .entry h3 {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
-    color: #24559e;
+    color: var(--jp-subheading);
     margin-top: 40px;
 }
 
@@ -38,7 +99,7 @@
 }
 
 .entry a {
-    color: #b34433;
+    color: var(--jp-link);
 }
 
 .entry img {
@@ -51,14 +112,14 @@
 
 .entry .img-caption {
     font-size: 14px;
-    color: #666;
+    color: var(--jp-muted);
     text-align: center;
     margin-top: -4px;
 }
 
 .entry_date {
     font-family: "Josefin Sans", sans-serif !important;
-    color: #24559e;
+    color: var(--jp-subheading);
     margin: 0;
 }
 

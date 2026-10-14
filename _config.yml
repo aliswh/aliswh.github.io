@@ -1,0 +1,12 @@
+title: "Alice S."
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /journal/:title/
+exclude:
+  - README.md

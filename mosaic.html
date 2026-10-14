@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>mosaic</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/R0style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <script>
+        function showPanel(num) {
+            if (num == 1) {
+                window.open("https://arxiv.org/abs/2509.04471");
+            }
+            if (num == 2) {
+                window.open("https://github.com/aliswh/mosaic");
+            }
+            if (num == 3) {
+                window.open("https://huggingface.co/AliceSch/mosaic-4b");
+            }
+        }
+    </script>
+</head>
+
+<body class="body_page">
+    <div class="div90 divCenterParent">
+        <div class="floatingbuttons">
+                <button type="button" onclick="showPanel(1)">Paper</button>
+                <button type="button" onclick="showPanel(2)">GitHub</button>
+                <button type="button" onclick="showPanel(3)">Model</button>
+        </div>
+        <div class="">
+            <div class="">
+                <h1>MOSAIC: A Multilingual, Taxonomy-Agnostic, and Computationally Efficient Approach for Radiological Report Classification</h1>
+            </div>
+            <div>
+                <h2 style="font-size: 20pt;">Radiology report analysis across multiple languages with few annotations and local deployment.</h2>
+            </div>
+            <div class="">
+                <p>MOSAIC is an open-source framework for radiological report classification designed to work across multiple languages, label taxonomies, and imaging settings. It is built on MedGemma-4B and supports both zero- and few-shot prompting as well as lightweight fine-tuning.</p>
+                <p>The project was presented at the ClinicalNLP workshop at LREC2026 in Palma, Mallorca. The work focuses on practical clinical NLP: strong performance with limited annotations and hardware requirements that fit consumer-grade GPUs rather than large proprietary systems.</p>
+                <p>Across seven datasets in English, Spanish, French, and Danish, MOSAIC reports strong classification performance while remaining efficient enough to run locally. The paper also shows that, with data augmentation, as few as 80 annotated Danish reports can approach the performance of training on the full 1,600-sample set.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table class="div90">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Project links: the paper describes the multilingual and taxonomy-agnostic method, the GitHub repository contains the training and evaluation code, and the model page provides downloadable checkpoints.</p>
+                        <img style="max-width: none; width: 35%;" src="https://github.com/aliswh/mosaic/blob/main/mosaic-icon.png?raw=true" alt="MOSAIC logo">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

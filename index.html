@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 
@@ -7,15 +9,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.4">
     <title>Alice S. : Projects Portfolio</title>
     <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <script>
         var counter = 0;
         var clicked;
+        function showTab(name) {
+            var target = document.getElementById('tab-' + name);
+            var panels = document.querySelectorAll('.tab_panel');
+            var current = null;
+            panels.forEach(function (el) {
+                if (el.style.display !== 'none') current = el;
+            });
+
+            document.querySelectorAll('.tabs .tab').forEach(function (el) {
+                el.classList.toggle('tab_active', el.dataset.tab === name);
+            });
+            if (name !== 'projects') {
+                for (i = 1; i <= 10; i++) {
+                    var obj = document.getElementById(i);
+                    if (obj) obj.style.display = "none";
+                }
+                counter = 0;
+            }
+
+            if (current === target) return;
+
+            function reveal() {
+                panels.forEach(function (el) {
+                    el.style.display = (el === target) ? '' : 'none';
+                });
+                target.style.opacity = 0;
+                requestAnimationFrame(function () {
+                    target.style.opacity = 1;
+                });
+            }
+
+            if (current) {
+                current.style.opacity = 0;
+                window.setTimeout(reveal, 150);
+            } else {
+                reveal();
+            }
+        }
         function showPanel(num) {
             if (window.screen.width >= 1024) {
                 if ( counter == 0 || num != clicked) {
-                    for (i=1; i<=8; i++) {  // this must be incremented when adding new projects
+                    for (i=1; i<=10; i++) {  // this must be incremented when adding new projects
                         document.getElementById(i).style.display = "none";
                     }
                     document.getElementById(num).style.display = "block";
@@ -56,6 +97,9 @@
                 if (num == 9) {
                     window.open("https://aliswh.github.io/danskcxr.html")
                 }
+                if (num == 10) {
+                    window.open("https://aliswh.github.io/mosaic.html")
+                }
             }
         }
     </script>
@@ -65,27 +109,25 @@
 <body class="body_index">
     <div class="indexdiv">
         <!--wrapperdiv-->
-        <div class="id_div">
-            <div>
-                <div class="title_div">
-                    <h1>Projects Portfolio</h1>
-                    <img class="img imgid" src="https://avatars0.githubusercontent.com/u/39992505?s=460&u=add36d24092f63be12abd2dfca782e4faea5627f&v=4" alt="myphoto">
-                </div>
-                    
-                <div class="aboutme_div">
-                    <h2>About me</h2>
-                    <p class="p_id">Hi, I'm Alice! I am a PhD student in Computer Science at the University of Copenhagen.</p>
-                    <p class="p_id">My research focuses on the intersection of machine learning and medicine.</p>
-                    <p class="p_id">Right now, I'm looking into representation learning and distribution alignment via optimal transport. I've worked with medical imaging analysis and natural language processing.</p>
-                    <p class="p_id">Find me on <a class="indexlink" href="https://github.com/aliswh">GitHub</a> or <a class="indexlink" href="https://www.linkedin.com/in/alice-schiavone-66b3b1243/">LinkedIn</a>.</p>
-                    <p class="p_id">I made this webpage from scatch for fun (before LLMs), so it's not perfect!</p>
-                </div>
-            </div>  
-        </div>
+        {% include sidebar.html %}
 
         <div class="list_div">
+            {% include tabs.html active="projects" inline=true %}
+
+            <div id="tab-projects" class="tab_panel">
             <!--project list-->
             <!--card colors:, #3d6bad, #5581ba, #6e97c8, #89aed5-->
+
+            <div class="card" style="background-color: #24559e;">
+                <h3>MOSAIC: Efficient Multilingual Radiology Report Classification</h3>
+                <p>Open-source framework for analyzing radiology reports across multiple languages with few annotations on local hardware.</p>
+                <p><u><b>Presented at ClinicalNLP at LREC2026.</b></u></p>
+                <p>Keywords: Multilingual NLP, Radiology Reports, Efficient Language Models</p>
+                <img class="img" src="https://github.com/aliswh/mosaic/blob/main/mosaic-icon.png?raw=true" alt="MOSAIC logo">
+                <div style="text-align: right;">
+                    <button type="button" onclick="showPanel(10)">Dedicated page</button>
+                </div>
+            </div>
 
             <div class="card" style="background-color: #24559e;">
                 <!--7st project-->
@@ -188,17 +230,6 @@
                     <button type="button" onclick="showPanel(6)">Dedicated page</button>
                 </div>            </div>
 
-            <div class="card" style="background-color: #89aed5">
-                <!--5rd project-->
-                <h3>I will be a project!</h3>
-                
-                <p>Used technologies: personal growth</p>
-                <img class="solino" src="https://aliswh.github.io/img/solino.png" alt="Soon!">
-                <div style="text-align: right;">
-                    <button type="button" onclick="showPanel(0)">Dedicated page</button>
-                </div>            </div>
-
-
             <!--further projects: remove inline display:none to enable-->
             <div class="card" style="display: none; background-color: #5581ba">
                 <!--3rd project-->
@@ -208,7 +239,16 @@
                 <img class="solino" src="https://aliswh.github.io/img/solino.png" alt="Soon!">
                 <div style="text-align: right;">
                     <button type="button" onclick="showPanel(0)">Dedicated page</button>
-                </div>            </div> 
+                </div>            </div>
+            </div>
+
+            <div id="tab-travel" class="tab_panel" style="display: none;">
+                {% include travel-list.html %}
+            </div>
+
+            <div id="tab-journal" class="tab_panel" style="display: none;">
+                {% include journal-list.html %}
+            </div>
         </div>
 
         <div class="web_div">
@@ -231,6 +271,8 @@
             <object id="8" type="text/html" data="https://aliswh.github.io/wmhthesis.html">
             </object>
             <object id="9" type="text/html" data="https://aliswh.github.io/danskcxr.html">
+            </object>
+            <object id="10" type="text/html" data="https://aliswh.github.io/mosaic.html">
             </object>
         </div>
 

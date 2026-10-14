@@ -1,5 +1,11 @@
 <nav class="tabs{% if include.light %} tabs_light{% endif %}" aria-label="Sections">
+    {% if include.inline %}
+    <button type="button" class="tab{% if include.active == 'projects' %} tab_active{% endif %}" data-tab="projects" onclick="showTab('projects')"{% if include.active == 'projects' %} aria-current="page"{% endif %}>Projects</button>
+    <button type="button" class="tab{% if include.active == 'travel' %} tab_active{% endif %}" data-tab="travel" onclick="showTab('travel')"{% if include.active == 'travel' %} aria-current="page"{% endif %}>Travel</button>
+    <button type="button" class="tab{% if include.active == 'journal' %} tab_active{% endif %}" data-tab="journal" onclick="showTab('journal')"{% if include.active == 'journal' %} aria-current="page"{% endif %}>Journal</button>
+    {% else %}
     <a href="{{ '/' | relative_url }}" class="tab{% if include.active == 'projects' %} tab_active{% endif %}"{% if include.active == 'projects' %} aria-current="page"{% endif %}>Projects</a>
     <a href="{{ '/travel.html' | relative_url }}" class="tab{% if include.active == 'travel' %} tab_active{% endif %}"{% if include.active == 'travel' %} aria-current="page"{% endif %}>Travel</a>
     <a href="{{ '/journal/' | relative_url }}" class="tab{% if include.active == 'journal' %} tab_active{% endif %}"{% if include.active == 'journal' %} aria-current="page"{% endif %}>Journal</a>
+    {% endif %}
 </nav>

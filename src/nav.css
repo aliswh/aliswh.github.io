@@ -21,6 +21,21 @@
     display: inline-block;
 }
 
+button.tab {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.tab_panel {
+    transition: opacity 0.15s ease-in-out;
+}
+
+body {
+    transition: opacity 0.15s ease-in-out;
+}
+
 .tab:hover,
 .button_link:hover {
     background-color: #c06bac;

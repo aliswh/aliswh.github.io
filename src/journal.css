@@ -17,7 +17,7 @@
 .entry h1 {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
-    font-size: 29pt;
+    font-size: 28pt;
     color: #b34433;
     margin: 4px 0 24px;
 }
@@ -33,7 +33,7 @@
 .entry p,
 .entry li {
     font-family: "Noto Serif", serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 30px;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .entry .img-caption {
-    font-size: 15px;
+    font-size: 14px;
     color: #666;
     text-align: center;
     margin-top: -4px;

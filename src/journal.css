@@ -41,6 +41,21 @@
     color: #b34433;
 }
 
+.entry img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px auto;
+    border-radius: 8px;
+}
+
+.entry .img-caption {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: -4px;
+}
+
 .entry_date {
     font-family: "Josefin Sans", sans-serif !important;
     color: #24559e;

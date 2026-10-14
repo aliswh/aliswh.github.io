@@ -1,0 +1,15 @@
+---
+layout: portfolio
+title: Journal
+active: journal
+---
+{% for post in site.posts %}
+<div class="card" style="background-color: {% cycle '#24559e', '#1E3F82', '#224894', '#3d6bad' %};">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.date | date: "%-d %B %Y" }}</p>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    <div style="text-align: right;">
+        <a class="button_link" href="{{ post.url | relative_url }}">Read entry</a>
+    </div>
+</div>
+{% endfor %}

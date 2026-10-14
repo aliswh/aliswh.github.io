@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <title>Alice S. : {{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/src/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/src/nav.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+
+<body class="body_index">
+    <div class="indexdiv">
+        {% include sidebar.html %}
+
+        <div class="list_div">
+            {% include tabs.html active=page.active %}
+
+            {{ content }}
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 
@@ -7,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.4">
     <title>Alice S. : Projects Portfolio</title>
     <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <script>
@@ -65,23 +68,11 @@
 <body class="body_index">
     <div class="indexdiv">
         <!--wrapperdiv-->
-        <div class="id_div">
-            <div>
-                <div class="title_div">
-                    <h1>Projects Portfolio</h1>
-                    <img class="img imgid" src="https://avatars0.githubusercontent.com/u/39992505?s=460&u=add36d24092f63be12abd2dfca782e4faea5627f&v=4" alt="myphoto">
-                </div>
-                    
-                <div class="aboutme_div">
-                    <h2>About me</h2>
-                    <p class="p_id">Hi, I'm Alice! I am a PhD student in Computer Science at the University of Copenhagen. I'm interested in responsible medical data analysis, like language modeling and image processing. </p>
-                    <p class="p_id">Find me on <a class="indexlink" href="https://github.com/aliswh">GitHub</a> or <a class="indexlink" href="https://www.linkedin.com/in/alice-schiavone-66b3b1243/">LinkedIn</a>.</p>
-                    <p class="p_id">I made this webpage from scatch for fun (before LLMs), so it's not perfect!</p>
-                </div>
-            </div>  
-        </div>
+        {% include sidebar.html %}
 
         <div class="list_div">
+            {% include tabs.html active="projects" %}
+
             <!--project list-->
             <!--card colors:, #3d6bad, #5581ba, #6e97c8, #89aed5-->
 

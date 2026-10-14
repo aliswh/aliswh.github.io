@@ -1,0 +1,5 @@
+<nav class="tabs{% if include.light %} tabs_light{% endif %}" aria-label="Sections">
+    <a href="{{ '/' | relative_url }}" class="tab{% if include.active == 'projects' %} tab_active{% endif %}"{% if include.active == 'projects' %} aria-current="page"{% endif %}>Projects</a>
+    <a href="{{ '/travel.html' | relative_url }}" class="tab{% if include.active == 'travel' %} tab_active{% endif %}"{% if include.active == 'travel' %} aria-current="page"{% endif %}>Travel</a>
+    <a href="{{ '/journal/' | relative_url }}" class="tab{% if include.active == 'journal' %} tab_active{% endif %}"{% if include.active == 'journal' %} aria-current="page"{% endif %}>Journal</a>
+</nav>

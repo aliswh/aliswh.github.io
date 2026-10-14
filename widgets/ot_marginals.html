@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marginal constraints of a transport plan</title>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+<style>
+:root {
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --text-muted: #9a9a9a;
+    --border: #d9dde3;
+    --red: 179, 68, 51;
+    --blue: 36, 85, 158;
+    --neutral: 136, 135, 128;
+}
+html, body { margin: 0; background: transparent; }
+body { font-family: "Noto Serif", serif; color: var(--text-primary); }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; padding: 4px 0 16px; }
+.mode {
+    font-family: "Josefin Sans", sans-serif; font-weight: 600; font-size: 14px;
+    padding: 8px 14px; border-radius: 25px; cursor: pointer;
+    border: 1.5px solid #b34433; color: #b34433; background: white;
+}
+.mode.on { background: #b34433; color: white; }
+.mode:focus-visible { outline: 2px solid #24559e; outline-offset: 2px; }
+.row { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
+.lbl { font-family: "Josefin Sans", sans-serif; font-size: 14px; color: var(--text-secondary); margin: 0 0 6px; }
+table.m { border-collapse: separate; border-spacing: 2px; font-family: "Josefin Sans", sans-serif; font-size: 11px; }
+table.m td { width: 30px; height: 24px; text-align: center; border-radius: 3px; color: var(--text-primary); }
+table.m td.lab { color: var(--text-secondary); }
+#info { font-size: 14px; line-height: 24px; color: var(--text-secondary); margin: 16px 0 0; min-height: 48px; }
+svg { display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="controls">
+    <button class="mode on" id="b2" type="button">(II) dirt leaves z₀</button>
+    <button class="mode" id="b3" type="button">(III) holes at z₁ get filled</button>
+</div>
+<div class="row">
+    <div>
+        <p class="lbl" id="gl">Plane: click a cell to choose z₀</p>
+        <svg id="sv" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="3 by 3 grid with transport arrows">
+            <defs>
+                <marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#b34433" stroke-width="2" stroke-linecap="round"/></marker>
+                <marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#24559e" stroke-width="2" stroke-linecap="round"/></marker>
+            </defs>
+            <g id="cells"></g><g id="arr"></g><g id="txt"></g>
+        </svg>
+    </div>
+    <div>
+        <p class="lbl">Matrix T[source, destination]</p>
+        <table class="m" id="mt"></table>
+    </div>
+</div>
+<p id="info"></p>
+<script>
+const P = [.30, .15, .05, .15, .10, .05, .10, .05, .05];
+const Q = [.05, .05, .10, .05, .10, .15, .05, .15, .30];
+const pos = i => [i % 3, Math.floor(i / 3)];
+const C = [...Array(9)].map((_, i) => [...Array(9)].map((_, j) => {
+    const [a, b] = pos(i), [c, d] = pos(j);
+    return (a - c) ** 2 + (b - d) ** 2;
+}));
+const K = C.map(r => r.map(v => Math.exp(-v / 1.0)));
+let u = Array(9).fill(1), v = Array(9).fill(1);
+for (let t = 0; t < 500; t++) {
+    u = P.map((p, i) => p / K[i].reduce((s, k, j) => s + k * v[j], 0));
+    v = Q.map((q, j) => q / K.reduce((s, r, i) => s + r[j] * u[i], 0));
+}
+const T = K.map((r, i) => r.map((k, j) => u[i] * k * v[j]));
+const mx = Math.max(...T.flat());
+let mode = 2, sel = 4;
+const ns = 'http://www.w3.org/2000/svg', S = 80;
+const ctr = i => { const [x, y] = pos(i); return [x * S + 40, y * S + 40]; };
+const el = (t, a) => { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+const cells = document.getElementById('cells');
+for (let i = 0; i < 9; i++) {
+    const [x, y] = pos(i);
+    const r = el('rect', { x: x * S + 1, y: y * S + 1, width: S - 2, height: S - 2, rx: 4, fill: 'transparent', stroke: '#b9bec7', 'stroke-width': 1 });
+    r.addEventListener('click', () => { sel = i; draw(); });
+    cells.appendChild(r);
+}
+document.getElementById('b2').onclick = () => { mode = 2; draw(); };
+document.getElementById('b3').onclick = () => { mode = 3; draw(); };
+
+function draw() {
+    const css = getComputedStyle(document.documentElement);
+    const rgb = css.getPropertyValue(mode === 2 ? '--red' : '--blue').trim();
+    const grey = css.getPropertyValue('--neutral').trim();
+    const col = `rgb(${rgb})`;
+    document.getElementById('b2').classList.toggle('on', mode === 2);
+    document.getElementById('b3').classList.toggle('on', mode === 3);
+    document.getElementById('gl').textContent = mode === 2 ? 'Plane: click a cell to choose z₀' : 'Plane: click a cell to choose z₁';
+    [...cells.children].forEach((r, i) => r.setAttribute('fill', i === sel ? `rgba(${rgb},0.12)` : 'transparent'));
+    const arr = document.getElementById('arr'), txt = document.getElementById('txt');
+    arr.innerHTML = ''; txt.innerHTML = '';
+    const [sx, sy] = ctr(sel);
+    for (let k = 0; k < 9; k++) {
+        const m = mode === 2 ? T[sel][k] : T[k][sel];
+        const w = 0.6 + 7 * m / mx, op = 0.25 + 0.75 * m / mx;
+        if (k === sel) {
+            arr.appendChild(el('circle', { cx: sx, cy: sy, r: 22, fill: 'none', stroke: col, 'stroke-width': w, opacity: op }));
+            continue;
+        }
+        const [kx, ky] = ctr(k);
+        const a = mode === 2 ? [sx, sy] : [kx, ky];
+        const b = mode === 2 ? [kx, ky] : [sx, sy];
+        const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy), ux = dx / L, uy = dy / L;
+        const s0 = mode === 2 ? 26 : 14, s1 = mode === 2 ? 14 : 26;
+        arr.appendChild(el('line', {
+            x1: a[0] + ux * s0, y1: a[1] + uy * s0, x2: b[0] - ux * s1, y2: b[1] - uy * s1,
+            stroke: col, 'stroke-width': w, opacity: op, 'stroke-linecap': 'round', 'marker-end': `url(#ah${mode})`
+        }));
+    }
+    const lab = el('text', { x: sx, y: sy + 5, 'text-anchor': 'middle', 'font-size': 15, 'font-family': 'Josefin Sans, sans-serif', fill: '#1a1a1a' });
+    lab.textContent = mode === 2 ? 'z₀' : 'z₁';
+    txt.appendChild(lab);
+
+    let h = '<tr><td class="lab"></td>' + [...Array(9)].map((_, j) => `<td class="lab">${j}</td>`).join('') + '<td class="lab">Σ</td></tr>';
+    T.forEach((r, i) => {
+        h += `<tr><td class="lab">${i}</td>` + r.map((t, j) => {
+            const hit = mode === 2 ? i === sel : j === sel;
+            const a = hit ? 0.12 + 0.7 * t / mx : 0.06 + 0.22 * t / mx;
+            return `<td style="background:rgba(${hit ? rgb : grey},${a.toFixed(2)});${hit ? 'font-weight:600' : 'color:var(--text-muted)'}">${t < 0.005 ? '·' : t.toFixed(2)}</td>`;
+        }).join('') + `<td style="${mode === 2 && i === sel ? `background:rgba(${rgb},0.3);font-weight:600` : 'color:var(--text-muted)'}">${P[i].toFixed(2)}</td></tr>`;
+    });
+    h += '<tr><td class="lab">Σ</td>' + Q.map((q, j) => `<td style="${mode === 3 && j === sel ? `background:rgba(${rgb},0.3);font-weight:600` : 'color:var(--text-muted)'}">${q.toFixed(2)}</td>`).join('') + '<td></td></tr>';
+    document.getElementById('mt').innerHTML = h;
+
+    const [x, y] = pos(sel);
+    document.getElementById('info').textContent = mode === 2
+        ? `(II) z₀ = (x₀, y₀) = (${x}, ${y}) is cell ${sel}, so row ${sel}. Arrows go to every cell, including a loop back to z₀ for dirt that stays put. Row sum = p(z₀) = ${P[sel].toFixed(2)}.`
+        : `(III) z₁ = (x₁, y₁) = (${x}, ${y}) is cell ${sel}, so column ${sel}. Arrows arrive from every cell, including a loop for dirt already in place. Column sum = q(z₁) = ${Q[sel].toFixed(2)}.`;
+}
+draw();
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} : Alice S. journal</title>
+    <link rel="stylesheet" href="{{ '/src/nav.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/src/journal.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js" defer></script>
+</head>
+
+<body class="journal_page">
+    <header class="journal_header">
+        {% include tabs.html active="journal" light=true %}
+    </header>
+
+    <article class="entry">
+        <p class="entry_date">{{ page.date | date: "%-d %B %Y" }}</p>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+        <p class="entry_back"><a href="{{ '/journal/' | relative_url }}">All journal entries</a></p>
+    </article>
+
+    <script>
+        function fitFrames() {
+            document.querySelectorAll('iframe.widget').forEach(function (f) {
+                try {
+                    f.style.height = f.contentDocument.documentElement.scrollHeight + 'px';
+                } catch (e) {}
+            });
+        }
+        document.querySelectorAll('iframe.widget').forEach(function (f) {
+            f.addEventListener('load', fitFrames);
+        });
+        window.addEventListener('resize', fitFrames);
+    </script>
+</body>
+
+</html>

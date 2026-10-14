@@ -1,0 +1,60 @@
+.journal_page {
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+.journal_header {
+    padding: 24px 5%;
+}
+
+.entry {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 5% 64px;
+}
+
+.entry h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 28pt;
+    color: #b34433;
+    margin: 4px 0 24px;
+}
+
+.entry h2,
+.entry h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    color: #24559e;
+    margin-top: 40px;
+}
+
+.entry p,
+.entry li {
+    font-family: "Noto Serif", serif;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.entry a {
+    color: #b34433;
+}
+
+.entry_date {
+    font-family: "Josefin Sans", sans-serif !important;
+    color: #24559e;
+    margin: 0;
+}
+
+.entry_back {
+    margin-top: 48px;
+}
+
+iframe.widget {
+    width: 100%;
+    height: 620px;
+    border: none;
+    margin: 16px 0;
+    display: block;
+}

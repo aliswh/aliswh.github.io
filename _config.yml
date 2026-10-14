@@ -1,0 +1,7 @@
+title: "Alice S."
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+permalink: /journal/:title/
+exclude:
+  - README.md

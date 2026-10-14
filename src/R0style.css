@@ -2,28 +2,28 @@ h1 {
     font-family: "Josefin Sans", sans-serif;
     color: #b34433;
     font-weight: 300;
-    font-size: 28pt;
+    font-size: 29pt;
 }
 
 h2 {
     font-family: "Josefin Sans", sans-serif;;
     color: black;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 th {
     font-family: "Josefin Sans", sans-serif;;
     color: #b34433;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 26px;
 }
 
 p {
     font-family: "Noto Serif";
     color: black;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 30px;
     text-align: justify;
 }
@@ -36,7 +36,7 @@ li {
     font-family: "Noto Serif";
     color: black;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 30px;
     text-align: justify;
 }

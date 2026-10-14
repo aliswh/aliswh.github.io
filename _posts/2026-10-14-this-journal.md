@@ -18,7 +18,7 @@ When I learn something new, I like to do it via active recall, or the Feynman Te
 
 I already use a analog notebook to take notes and sketch while a read something new. When something is not clear to me, I try to draw it out. Nowadays and with LLMs, I can ask the bot to create interactive visualisations based on my drawings. How cool is that?
 
-Why am I sharing this? Mainly to keep me accountable and track my learning progress. I hope that going back to my own, structured notes would help me refresh my memory in the future. I chose this format because I was a teenager in the 2010's, and I am a bit nostalgic of the personal blog era. While this is not quite the same, this is my way to feel cool online again. 
+I am sharing this to keep me accountable and track my learning progress. I hope that going back to my own, structured notes would help me refresh my memory in the future. I chose this format because I was a teenager in the 2010's, and I am a bit nostalgic of the personal blog era. While this is not quite the same, this is my way to feel cool online again. 
 
 Thank you for reading so far!
 

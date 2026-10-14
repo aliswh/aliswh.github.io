@@ -2,27 +2,27 @@ h1 {
     font-family: "Josefin Sans", sans-serif;
     color: white;
     font-weight: 300;
-    font-size: 29pt;
+    font-size: 28pt;
 }
 
 h2 {
     font-family: "Josefin Sans", sans-serif;;
     color: white;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 25px;
 }
 
 h3 {
     font-family: "Josefin Sans", sans-serif;;
     color: white;
-    font-size: 26px;
+    font-size: 25px;
 }
 
 p {
     font-family: "Noto Serif";
     color: white;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 30px;
     text-align: justify;
 }
@@ -56,7 +56,7 @@ p {
 }
 
 .imgid {
-    max-width: 200pt;
+    max-width: 150pt;
     border: 0pt solid;
     border-radius: 50%;
     border-color: transparent;
@@ -96,12 +96,21 @@ button {
     margin-left: 16pt;
     max-height: 100vh;
     overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.6) transparent;
 }
 
 .id_div::-webkit-scrollbar {
-    display: none;
+    width: 6px;
+}
+
+.id_div::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+}
+
+.id_div::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .aboutme_div{
